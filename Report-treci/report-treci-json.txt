@@ -1,0 +1,7 @@
+{
+    "NazivOrganizacije": "LAMA d.o.o",
+    "UrudzbeniBroj": "497-03-02-04/1-21-10",
+    "IDPredmet": "113-03/21-01/01",
+    "IDUstrojstvenaJedinica": "498-03-02-01",
+    "DatumZaprimanja": "6/30/21"
+}

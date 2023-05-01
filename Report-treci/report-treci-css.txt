@@ -1,0 +1,54 @@
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  gap: 10px;
+  }
+
+.row {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cell1 {
+    font-size: 45px;
+    border: solid 3px black;
+    height: 130px;
+    text-align: center;
+    align-items: center;
+    width: 800px;
+}
+.cell2 {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    height: 150px;
+    width: 500px;
+    padding-left: 15px;
+    align-items: flex-start;
+    gap:10px;
+}
+.cell3 {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    height: 150px;
+    width: 300px;
+    padding-left: 15px;
+    align-items: flex-start;
+    gap: 10px;
+}
+.top {
+    font-size: 30px;
+}
+
+.bottom {
+    font-size: 45px;
+}

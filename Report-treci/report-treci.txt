@@ -1,0 +1,36 @@
+<head>
+  <style>
+    {{asset "/Obuka/ReportTreci/report-treci.css"}}
+  </style>
+
+</head>
+<body>
+  <div class="container">
+  <div class="row">
+      <div class="cell1">
+        {{NazivOrganizacije}}
+      </div>
+  </div>
+  <div class="row">
+    <div class="cell2"> 
+      <div class="top">Klasifikacijska Oznaka</div>
+      <div class="bottom">{{IDPredmet}}</div>
+</div>
+    <div class="cell3">
+      <div class="top">Ustr. Jed.</div>
+      <div class="bottom">{{IDUstrojstvenaJedinica}}</div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="cell2">
+      <div class="top">Urudžbeni Broj</div>
+      <div class="bottom">{{UrudzbeniBroj}}</div>
+    </div>
+    <div class="cell3">
+      <div class="top">Datum</div>
+      <div class="bottom">{{DatumZaprimanja}}</div>
+    </div>
+  </div>
+</div>
+
+</body>

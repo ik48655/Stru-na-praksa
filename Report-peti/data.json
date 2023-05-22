@@ -1,0 +1,200 @@
+{
+  "katedre": [
+    {
+      "id": 1,
+      "ime": "katedra",
+      "studij": "studiji",
+      "ak. god.": "2022./23.",
+      "stud. god.": 1,
+      "pocetak turnusa": "01.09.2022.",
+      "kraj turnusa": "01.06.2023.",
+      "pred": 30,
+      "sem": 10,
+      "vjez": 30
+    }
+  ],
+  "profesori": [
+    {
+      "ISVUOznaka": "2022",
+      "NastavnikSuradnikNaziv": "Ime Prezime1",
+      "OIB": 12345678901,
+      "ZvanjeNaziv": "redoviti profesor u trajnom zvanju",
+      "NazivNastavnikStatus": "PUNI",
+      "Studij": "Studiji naziv",
+      "Katedra": "KAT - 01",
+      "PredmetKratica": "PRE101",
+      "PredmetNaziv": "Puni naziv predmeta",
+      "PkSkolskaGodina": 12,
+      "SkolskaGodinaNaziv": "2022./23.",
+      "MaticnaUstanovaKratica": "Matična ustanova kratica",
+      "MaticnaUstanovaNaziv": "Matična ustanova",
+      "PlaniraniSatiPredavanja": 3,
+      "PlaniraniSatiSeminari": 0,
+      "PlaniraniSatiVjezbe": 0,
+      "NormaPlaniraniSatiPredavanja": 9,
+      "NormaPlaniraniSatiSeminari": 0,
+      "NormaPlaniraniSatiVjezbe": 0,
+      "RealiziraniSatiPredavanja": 3,
+      "RealiziraniSatiSeminari": 0,
+      "RealiziraniSatiVjezbe": 0,
+      "NormaRealiziraniSatiPredavanja": 9,
+      "NormaRealiziraniSatiSeminari": 0,
+      "NormaRealiziraniSatiVjezbe": 0
+    },
+    {
+      "ISVUOznaka": "2022",
+      "NastavnikSuradnikNaziv": "Ime Prezime2",
+      "OIB": 12345678902,
+      "ZvanjeNaziv": "redoviti profesor u trajnom zvanju",
+      "NazivNastavnikStatus": "KUMUL. 50%",
+      "Studij": "Studiji naziv",
+      "Katedra": "KAT - 01",
+      "PredmetKratica": "PRE101",
+      "PredmetNaziv": "Puni naziv predmeta",
+      "PkSkolskaGodina": 12,
+      "SkolskaGodinaNaziv": "2022./23.",
+      "MaticnaUstanovaKratica": "Matična ustanova kratica",
+      "PlaniraniSatiPredavanja": 0,
+      "PlaniraniSatiSeminari": 1,
+      "PlaniraniSatiVjezbe": 2,
+      "NormaPlaniraniSatiPredavanja": 0,
+      "NormaPlaniraniSatiSeminari": 1.5,
+      "NormaPlaniraniSatiVjezbe": 2,
+      "RealiziraniSatiPredavanja": 0,
+      "RealiziraniSatiSeminari": 1,
+      "RealiziraniSatiVjezbe": 2,
+      "NormaRealiziraniSatiPredavanja": 0,
+      "NormaRealiziraniSatiSeminari": 1.5,
+      "NormaRealiziraniSatiVjezbe": 2
+    },
+    {
+      "ISVUOznaka": "2022",
+      "NastavnikSuradnikNaziv": "Ime Prezime3",
+      "OIB": 12345678903,
+      "ZvanjeNaziv": "redoviti profesor",
+      "NazivNastavnikStatus": "PUNI",
+      "Studij": "Studiji naziv",
+      "Katedra": "KAT - 01",
+      "PredmetKratica": "PRE101",
+      "PredmetNaziv": "Puni naziv predmeta",
+      "PkSkolskaGodina": 12,
+      "SkolskaGodinaNaziv": "2022./23.",
+      "MaticnaUstanovaKratica": "Matična ustanova kratica",
+      "MaticnaUstanovaNaziv": "Matična ustanova",
+      "PlaniraniSatiPredavanja": 1,
+      "PlaniraniSatiSeminari": 0,
+      "PlaniraniSatiVjezbe": 0,
+      "NormaPlaniraniSatiPredavanja": 3,
+      "NormaPlaniraniSatiSeminari": 0,
+      "NormaPlaniraniSatiVjezbe": 0,
+      "RealiziraniSatiPredavanja": 1,
+      "RealiziraniSatiSeminari": 0,
+      "RealiziraniSatiVjezbe": 0,
+      "NormaRealiziraniSatiPredavanja": 3,
+      "NormaRealiziraniSatiSeminari": 0,
+      "NormaRealiziraniSatiVjezbe": 0
+    },
+    {
+      "ISVUOznaka": "2022",
+      "NastavnikSuradnikNaziv": "Ime Prezime4",
+      "OIB": 12345678904,
+      "ZvanjeNaziv": "izvanredni profesor",
+      "NazivNastavnikStatus": "PUNI",
+      "Studij": "Studiji naziv",
+      "Katedra": "KAT - 01",
+      "PredmetKratica": "PRE101",
+      "PredmetNaziv": "Puni naziv predmeta",
+      "PkSkolskaGodina": 12,
+      "SkolskaGodinaNaziv": "2022./23.",
+      "MaticnaUstanovaKratica": "Matična ustanova kratica",
+      "MaticnaUstanovaNaziv": "Matična ustanova",
+      "PlaniraniSatiPredavanja": 1,
+      "PlaniraniSatiSeminari": 0,
+      "PlaniraniSatiVjezbe": 4,
+      "NormaPlaniraniSatiPredavanja": 3,
+      "NormaPlaniraniSatiSeminari": 0,
+      "NormaPlaniraniSatiVjezbe": 4,
+      "RealiziraniSatiPredavanja": 1,
+      "RealiziraniSatiSeminari": 0,
+      "RealiziraniSatiVjezbe": 4,
+      "NormaRealiziraniSatiPredavanja": 3,
+      "NormaRealiziraniSatiSeminari": 0,
+      "NormaRealiziraniSatiVjezbe": 4
+    },
+    {
+      "ISVUOznaka": "2022",
+      "NastavnikSuradnikNaziv": "Ime Prezime5",
+      "OIB": 12345678905,
+      "ZvanjeNaziv": "izvanredni profesor",
+      "Studij": "Studiji naziv",
+      "Katedra": "KAT - 01",
+      "PredmetKratica": "PRE101",
+      "PredmetNaziv": "Puni naziv predmeta",
+      "PkSkolskaGodina": 12,
+      "SkolskaGodinaNaziv": "2022./23.",
+      "MaticnaUstanovaKratica": "Matična ustanova kratica",
+      "PlaniraniSatiPredavanja": 0,
+      "PlaniraniSatiSeminari": 2,
+      "PlaniraniSatiVjezbe": 0,
+      "NormaPlaniraniSatiPredavanja": 0,
+      "NormaPlaniraniSatiSeminari": 3,
+      "NormaPlaniraniSatiVjezbe": 0,
+      "RealiziraniSatiPredavanja": 0,
+      "RealiziraniSatiSeminari": 2,
+      "RealiziraniSatiVjezbe": 0,
+      "NormaRealiziraniSatiPredavanja": 0,
+      "NormaRealiziraniSatiSeminari": 3,
+      "NormaRealiziraniSatiVjezbe": 0
+    }
+  ],
+
+  "professors": [
+    {
+      "id": 1,
+      "ImePrezime": "Lovrić, Toni",
+      "Titula": "Prof. dr. sc",
+      "Status": "Puni",
+      "Brojevi": [5, 5, 5],
+      "Satnice": [6, 6, 6]
+    },
+    {
+      "id": 2,
+      "ImePrezime": "Šime Žura",
+      "Titula": "Prof. dr. sc",
+      "Status": "Naslovni",
+      "Brojevi": [5, 5, 5],
+      "Satnice": [6, 6, 6]
+    }
+  ],
+  "subjects": [
+    {
+      "name": "Subject 1",
+      "code": "SUB1"
+    },
+    {
+      "name": "Subject 2",
+      "code": "SUB2"
+    },
+    {
+      "name": "Subject 3",
+      "code": "SUB3"
+    }
+  ],
+  "dekani": [
+    {
+      "id": 1,
+      "ImePrezime": "Ante Antić",
+      "Titula": "Prof. dr. sc"
+    },
+    {
+      "id": 2,
+      "ImePrezime": "Lovre Lovrić",
+      "Titula": "Prof. dr. sc"
+    },
+    {
+      "id": 3,
+      "ImePrezime": "Mate Matić",
+      "Titula": "Prof. dr. sc"
+    }
+  ]
+}

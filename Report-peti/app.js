@@ -111,7 +111,7 @@ async function createExcelFile(data) {
 
   worksheet.addImage(logoImage, {
     tl: { col: 0.5, row: 1 }, // Adjust the coordinates (col, row) as needed to position the logo
-    br: { col: 2.65, row: 3.25 },
+    br: { col: 2, row: 3.25 },
   });
 
   // Predmet spajanje celija plus sadrzaj iz .json
@@ -257,26 +257,6 @@ async function createExcelFile(data) {
     row.height = height;
   });
 
-  // Racunanje sati
-  let sumSatiNastavePred = 0;
-  let sumSatiNastaveSem = 0;
-  let sumSatiNastaveVjezbe = 0;
-  let sumBrutoIznosPred = 0;
-  let sumBrutoIznosSem = 0;
-  let sumBrutoIznosVjezbe = 0;
-
-  // Bruto racunanje
-  let sumBrutoPred = 0;
-  let sumBrutoSem = 0;
-  let sumBrutoVjezbe = 0;
-
-  // Sati racunanje
-  let sumSatiPred = 0;
-  let sumSatiSem = 0;
-  let sumSatiVjezbe = 0;
-
-
-  let totalSum;
   // Sami sadrzaj/podaci iz jsona
   data.profesori.forEach((professor, index) => {
     const rowNumber = 16 + index + 1;
@@ -298,20 +278,6 @@ async function createExcelFile(data) {
     const sum = worksheet.getCell(`K${rowNumber}`).value + worksheet.getCell(`L${rowNumber}`).value + worksheet.getCell(`M${rowNumber}`).value;
     worksheet.getCell(`N${rowNumber}`).value = sum ;
     worksheet.getCell(`N${rowNumber}`).border = { right: {style: 'medium'}} ;
-
-    sumSatiNastavePred += professor['PlaniraniSatiPredavanja'];
-    sumSatiNastaveSem += professor['PlaniraniSatiSeminari']
-    sumSatiNastaveVjezbe += professor['PlaniraniSatiVjezbe'];
-
-    sumBrutoIznosPred += professor['NormaPlaniraniSatiPredavanja'];
-    sumBrutoIznosSem += professor['NormaPlaniraniSatiSeminari'];
-    sumBrutoIznosVjezbe += professor['NormaPlaniraniSatiVjezbe'];
-
-    sumBrutoPred = professor['NormaPlaniraniSatiPredavanja'] * professor['PlaniraniSatiPredavanja'];
-    sumBrutoSem = professor['NormaPlaniraniSatiSeminari'] * professor['PlaniraniSatiSeminari'];
-    sumBrutoVjezbe = professor['NormaPlaniraniSatiVjezbe'] * professor['PlaniraniSatiVjezbe'];
-
-    totalSum = sum;
 
     // Formatiranje za celije
     worksheet.getRow(rowNumber).eachCell((cell) => {
@@ -373,89 +339,82 @@ async function createExcelFile(data) {
 
   // Racunanje sati
   worksheet.getCell(`E${totalRowNumber}`).value = {
-    formula: `SUM(E17:E${totalRowNumber - 1})`,
-    result: sumSatiPred,
+    formula: `SUM(E17:E${totalRowNumber - 1})`
   };
   worksheet.getCell(`F${totalRowNumber}`).value = {
-    formula: `SUM(F17:F${totalRowNumber - 1})`,
-    result: sumSatiSem,
+    formula: `SUM(F17:F${totalRowNumber - 1})`
   };
   worksheet.getCell(`G${totalRowNumber}`).value = {
-    formula: `SUM(G17:G${totalRowNumber - 1})`,
-    result: sumSatiVjezbe,
+    formula: `SUM(G17:G${totalRowNumber - 1})`
   };
 
   //Bruto satnica
   worksheet.getCell(`H${totalRowNumber}`).value = {
-    formula: `SUM(H17:H${totalRowNumber - 1})`,
-    result: sumBrutoIznosPred,
+    formula: `SUM(H17:H${totalRowNumber - 1})`
   };
   worksheet.getCell(`I${totalRowNumber}`).value = {
-    formula: `SUM(I17:I${totalRowNumber - 1})`,
-    result: sumBrutoIznosSem,
+    formula: `SUM(I17:I${totalRowNumber - 1})`
   };
   worksheet.getCell(`J${totalRowNumber}`).value = {
-    formula: `SUM(J17:J${totalRowNumber - 1})`,
-    result: sumBrutoIznosVjezbe,
+    formula: `SUM(J17:J${totalRowNumber - 1})`
   };
 
   // Bruto iznosi
   worksheet.getCell(`K${totalRowNumber}`).value = {
-    formula: `SUM(K17:K${totalRowNumber - 1})`,
-    result: sumBrutoPred,
+    formula: `SUM(K17:K${totalRowNumber - 1})`
   };
   worksheet.getCell(`L${totalRowNumber}`).value = {
-    formula: `SUM(L17:L${totalRowNumber - 1})`,
-    result: sumBrutoSem,
+    formula: `SUM(L17:L${totalRowNumber - 1})`
   };
   worksheet.getCell(`M${totalRowNumber}`).value = {
-    formula: `SUM(M17:M${totalRowNumber - 1})`,
-    result: sumBrutoVjezbe,
+    formula: `SUM(M17:M${totalRowNumber - 1})`
   };
 
   //Ukupan iznos
   worksheet.getCell(`N${totalRowNumber}`).value = {
-    formula: `SUM(K${totalRowNumber}:M${totalRowNumber})`,
-    result: totalSum,
+    formula: `SUM(K${totalRowNumber}:M${totalRowNumber})`
   };
 
 
   let dekani = data.dekani;
 
-  worksheet.mergeCells('A28:C29');
-  worksheet.mergeCells('A34:C35');
-  worksheet.mergeCells('J34:L35');
-  worksheet.getCell('A28').value = {
+  let dekanRow = totalRowNumber + 3;
+  let dekanRow2 = totalRowNumber + 9;
+
+  worksheet.mergeCells(`A${dekanRow}:C${dekanRow + 1}`);
+  worksheet.mergeCells(`A${dekanRow2}:C${dekanRow2 + 1}`);
+  worksheet.mergeCells(`J${dekanRow2}:L${dekanRow2 + 1}`);
+  worksheet.getCell(`A${dekanRow}`).value = {
     richText: [
       { text: 'Prodekanica za nastavu i studentska pitanja\n' },
       { text: `Prof. dr. sc. ${dekani[0].ImePrezime}` },
     ],
   };
-  worksheet.getCell('A28').alignment = {
+  worksheet.getCell(`A${dekanRow}`).alignment = {
     vertical: 'middle',
     horizontal: 'left',
     wrapText: true,
   };
 
-  worksheet.getCell('A34').value = {
+  worksheet.getCell(`A${dekanRow2}`).value = {
     richText: [
       { text: 'Prodekan za financije i upravljanje\n' },
       { text: `Prof. dr. sc. ${dekani[1].ImePrezime}` },
     ],
   };
-  worksheet.getCell('A34').alignment = {
+  worksheet.getCell(`A${dekanRow2}`).alignment = {
     vertical: 'middle',
     horizontal: 'left',
     wrapText: true,
   };
 
-  worksheet.getCell('J34').value = {
+  worksheet.getCell(`J${dekanRow2}`).value = {
     richText: [
       { text: 'Dekan\n' },
       { text: `Prof. dr. sc. ${dekani[2].ImePrezime}` },
     ],
   };
-  worksheet.getCell('J34').alignment = {
+  worksheet.getCell(`J${dekanRow2}`).alignment = {
     vertical: 'middle',
     horizontal: 'left',
     wrapText: true,
